@@ -62,5 +62,4 @@ class MainActivity : AppCompatActivity(){
         fragmentTransition.add(R.id.fragmentContainerMain,fragment).addToBackStack(Fragment::class.java.simpleName).commit()
     }
 
-
 }
