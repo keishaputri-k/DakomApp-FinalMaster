@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.NewPostActivity">
+
+    <TextView
+        android:id="@+id/tvLableNewPost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_24dp"
+        android:text="@string/txt_new_post"
+        android:textSize="@dimen/_24sp"
+        android:textColor="@color/secondary_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivContainerPictureNewPost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_84dp"
+        app:layout_constraintEnd_toEndOf="@+id/tvLableNewPost"
+        app:layout_constraintStart_toStartOf="@+id/tvLableNewPost"
+        app:layout_constraintTop_toBottomOf="@+id/tvLableNewPost"
+        app:srcCompat="@drawable/ic_rectangle_post"
+        android:contentDescription="@string/txt_iv"/>
+
+    <ImageView
+        android:id="@+id/ivBackgroundNewPost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/ivContainerPictureNewPost"
+        app:layout_constraintEnd_toEndOf="@+id/ivContainerPictureNewPost"
+        app:layout_constraintStart_toStartOf="@+id/ivContainerPictureNewPost"
+        app:layout_constraintTop_toTopOf="@+id/ivContainerPictureNewPost"
+        app:srcCompat="@drawable/ic_ellipse"
+        android:contentDescription="@string/txt_iv"/>
+
+    <ImageView
+        android:id="@+id/ivPictureNewPost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/ivBackgroundNewPost"
+        app:layout_constraintEnd_toEndOf="@+id/ivBackgroundNewPost"
+        app:layout_constraintHorizontal_bias="0.458"
+        app:layout_constraintStart_toStartOf="@+id/ivBackgroundNewPost"
+        app:layout_constraintTop_toTopOf="@+id/ivBackgroundNewPost"
+        app:layout_constraintVertical_bias="0.416"
+        app:srcCompat="@drawable/ic_upload"
+        android:contentDescription="@string/txt_iv" />
+
+    <TextView
+        android:id="@+id/tvCaptionLabelNewPost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="24dp"
+        android:text="@string/txt_caption"
+        android:textColor="@color/main_color"
+        android:textSize="@dimen/_15sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivContainerPictureNewPost" />
+
+    <EditText
+        android:id="@+id/etCaptionPost"
+        android:layout_width="@dimen/_342dp"
+        android:layout_height="@dimen/_163dp"
+        android:layout_marginTop="@dimen/_12dp"
+        android:background="#E2E2E2"
+        android:hint="@string/txt_caption"
+        android:padding="@dimen/_10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvCaptionLabelNewPost"
+        app:layout_constraintVertical_bias="0.0"
+        />
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/background_bottom_button"
+        android:layout_marginTop="@dimen/_20dp"
+        app:cardElevation="@dimen/_40dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:layout_margin="@dimen/_20dp"
+            android:orientation="horizontal">
+            <Button
+                android:layout_width="@dimen/_110dp"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_5dp"
+                android:layout_marginStart="@dimen/_20dp"
+                android:text="@string/txt_discard"
+                android:textColor="@color/red"
+                style="?android:attr/buttonBarButtonStyle" />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_10dp"
+                android:text="@string/txt_post_now"
+                android:backgroundTint="@color/secondary_color"
+                android:layout_marginStart="@dimen/_20dp"
+                android:layout_marginEnd="@dimen/_20dp"
+                android:textColor="@color/white"
+                style="?android:attr/buttonBarButtonStyle" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

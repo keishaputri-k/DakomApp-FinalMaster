@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="5dp"
+    android:orientation="vertical"
+    tools:context=".ui.NewLecturesActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/tvNewLecture"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_24dp"
+            android:text="@string/txt_new_lectures"
+            android:textColor="@color/secondary_color"
+            android:textSize="@dimen/_24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/ivContainerPictureNewLecture"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp"
+            app:layout_constraintEnd_toEndOf="@+id/tvNewLecture"
+            app:layout_constraintStart_toStartOf="@+id/tvNewLecture"
+            app:layout_constraintTop_toBottomOf="@+id/tvNewLecture"
+            app:srcCompat="@drawable/ic_rectangle_post" />
+
+        <ImageView
+            android:id="@+id/ivBackgroundNewLecture"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="76dp"
+            app:layout_constraintEnd_toEndOf="@+id/ivContainerPictureNewLecture"
+            app:layout_constraintStart_toStartOf="@+id/ivContainerPictureNewLecture"
+            app:layout_constraintTop_toTopOf="@+id/ivContainerPictureNewLecture"
+            app:srcCompat="@drawable/ic_ellipse" />
+
+        <ImageView
+            android:id="@+id/ivBtnNewLecture"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/txt_iv"
+            app:layout_constraintBottom_toBottomOf="@+id/ivBackgroundNewLecture"
+            app:layout_constraintEnd_toEndOf="@+id/ivBackgroundNewLecture"
+            app:layout_constraintHorizontal_bias="0.458"
+            app:layout_constraintStart_toStartOf="@+id/ivBackgroundNewLecture"
+            app:layout_constraintTop_toTopOf="@+id/ivBackgroundNewLecture"
+            app:layout_constraintVertical_bias="0.416"
+            app:srcCompat="@drawable/ic_upload" />
+
+        <TextView
+            android:id="@+id/tvTitleLabelNewLecture"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_24dp"
+            android:layout_marginTop="@dimen/_20dp"
+            android:text="@string/txt_title"
+            android:textColor="@color/main_color"
+            android:textSize="@dimen/_15sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ivContainerPictureNewLecture" />
+
+        <EditText
+            android:id="@+id/etTitleNewLecture"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_45dp"
+            android:layout_marginHorizontal="@dimen/_20dp"
+            android:layout_marginVertical="@dimen/_10dp"
+            android:background="@drawable/background_edit_text"
+            android:importantForAutofill="no"
+            android:inputType="text"
+            android:padding="@dimen/_15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvTitleLabelNewLecture" />
+
+        <TextView
+            android:id="@+id/tvLecturerLabelNewLecture"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20dp"
+            android:text="@string/txt_lecturer"
+            android:textColor="@color/main_color"
+            android:textSize="@dimen/_15sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/etTitleNewLecture"
+            app:layout_constraintTop_toBottomOf="@+id/etTitleNewLecture" />
+
+        <EditText
+            android:id="@+id/etLecturerNewLecture"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_45dp"
+            android:layout_marginHorizontal="@dimen/_20dp"
+            android:layout_marginVertical="@dimen/_10dp"
+            android:background="@drawable/background_edit_text"
+            android:importantForAutofill="no"
+            android:inputType="text"
+            android:padding="@dimen/_15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvLecturerLabelNewLecture" />
+
+        <TextView
+            android:id="@+id/tvTypeLabelNewLecture"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20dp"
+            android:text="@string/txt_type"
+            android:textColor="@color/main_color"
+            android:textSize="@dimen/_15sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/etLecturerNewLecture"
+            app:layout_constraintTop_toBottomOf="@+id/etLecturerNewLecture" />
+
+        <EditText
+            android:id="@+id/etTypeNewLecture"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_45dp"
+            android:layout_marginHorizontal="@dimen/_20dp"
+            android:layout_marginVertical="@dimen/_10dp"
+            android:background="@drawable/background_edit_text"
+            android:importantForAutofill="no"
+            android:inputType="text"
+            android:padding="@dimen/_15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvTypeLabelNewLecture"
+            tools:ignore="LabelFor" />
+
+        <TextView
+            android:id="@+id/tvFormLinkLabelNewLecture"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20dp"
+            android:text="@string/txt_form_link"
+            android:textColor="@color/main_color"
+            android:textSize="@dimen/_15sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/etTypeNewLecture"
+            app:layout_constraintTop_toBottomOf="@+id/etTypeNewLecture" />
+
+        <EditText
+            android:id="@+id/etFormLinkNewLecture"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_45dp"
+            android:layout_marginHorizontal="@dimen/_20dp"
+            android:layout_marginVertical="@dimen/_10dp"
+            android:background="@drawable/background_edit_text"
+            android:importantForAutofill="no"
+            android:inputType="text"
+            android:padding="@dimen/_15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvFormLinkLabelNewLecture" />
+
+        <TextView
+            android:id="@+id/tvGroupLinkLabelNewLecture"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20dp"
+            android:text="@string/txt_group_link"
+            android:textColor="@color/main_color"
+            android:textSize="@dimen/_15sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/etFormLinkNewLecture"
+            app:layout_constraintTop_toBottomOf="@+id/etFormLinkNewLecture" />
+
+        <EditText
+            android:id="@+id/etGroupLinkNewLecture"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_45dp"
+            android:layout_marginHorizontal="@dimen/_20dp"
+            android:layout_marginVertical="@dimen/_10dp"
+            android:background="@drawable/background_edit_text"
+            android:importantForAutofill="no"
+            android:inputType="text"
+            android:padding="@dimen/_15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvGroupLinkLabelNewLecture" />
+
+        <TextView
+            android:id="@+id/tvDateLabelNewLecture"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20dp"
+            android:text="@string/txt_date"
+            android:textColor="@color/main_color"
+            android:textSize="@dimen/_15sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/etGroupLinkNewLecture"
+            app:layout_constraintTop_toBottomOf="@+id/etGroupLinkNewLecture" />
+
+        <EditText
+            android:id="@+id/etDateNewLecture"
+            android:layout_width="@dimen/_149dp"
+            android:layout_height="@dimen/_45dp"
+            android:layout_marginHorizontal="@dimen/_20dp"
+            android:layout_marginVertical="@dimen/_10dp"
+            android:background="@drawable/background_edit_text"
+            android:importantForAutofill="no"
+            android:inputType="text"
+            android:padding="@dimen/_15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvDateLabelNewLecture"
+            tools:ignore="TextFields" />
+
+        <TextView
+            android:id="@+id/tvQuotaLabelNewLecture"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20dp"
+            android:text="@string/txt_quota"
+            android:textColor="@color/main_color"
+            android:textSize="@dimen/_15sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/etGroupLinkNewLecture"
+            app:layout_constraintHorizontal_bias="0.584"
+            app:layout_constraintStart_toEndOf="@+id/tvDateLabelNewLecture"
+            app:layout_constraintTop_toBottomOf="@+id/etGroupLinkNewLecture" />
+
+        <EditText
+            android:id="@+id/etQuotaNewLecture"
+            android:layout_width="@dimen/_149dp"
+            android:layout_height="@dimen/_45dp"
+            android:layout_marginVertical="@dimen/_10dp"
+            android:layout_marginEnd="@dimen/_10dp"
+            android:background="@drawable/background_edit_text"
+            android:importantForAutofill="no"
+            android:inputType="text"
+            android:padding="@dimen/_15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/tvQuotaLabelNewLecture"
+            app:layout_constraintTop_toBottomOf="@+id/tvQuotaLabelNewLecture"
+            tools:ignore="TextFields" />
+
+        <TextView
+            android:id="@+id/tvCpLabelNewLecture"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20dp"
+            android:text="@string/tv_contact_person"
+            android:textColor="@color/main_color"
+            android:textSize="@dimen/_15sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/etDateNewLecture"
+            app:layout_constraintTop_toBottomOf="@+id/etDateNewLecture" />
+
+        <EditText
+            android:id="@+id/etCpNewLecture"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_45dp"
+            android:layout_marginHorizontal="@dimen/_20dp"
+            android:layout_marginVertical="@dimen/_10dp"
+            android:background="@drawable/background_edit_text"
+            android:importantForAutofill="no"
+            android:inputType="text"
+            android:padding="@dimen/_15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvCpLabelNewLecture" />
+
+        <TextView
+            android:id="@+id/tvAddressLabelNewLecture"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20dp"
+            android:text="@string/txt_address"
+            android:textColor="@color/main_color"
+            android:textSize="@dimen/_15sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/etCpNewLecture"
+            app:layout_constraintTop_toBottomOf="@+id/etCpNewLecture" />
+
+        <EditText
+            android:id="@+id/etAddressNewLecture"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_95dp"
+            android:layout_marginHorizontal="@dimen/_20dp"
+            android:layout_marginVertical="@dimen/_10dp"
+            android:background="@drawable/background_edit_text"
+            android:importantForAutofill="no"
+            android:inputType="text"
+            android:padding="@dimen/_15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvAddressLabelNewLecture" />
+
+        <TextView
+            android:id="@+id/tvDescriptionLabelNewLecture"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20dp"
+            android:text="@string/txt_description"
+            android:textColor="@color/main_color"
+            android:textSize="@dimen/_15sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/etAddressNewLecture"
+            app:layout_constraintTop_toBottomOf="@+id/etAddressNewLecture" />
+
+        <EditText
+            android:id="@+id/etDescriptionNewLecture"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_95dp"
+            android:layout_marginHorizontal="@dimen/_20dp"
+            android:layout_marginVertical="@dimen/_10dp"
+            android:layout_marginBottom="@dimen/_10dp"
+            android:background="@drawable/background_edit_text"
+            android:importantForAutofill="no"
+            android:inputType="text"
+            android:padding="@dimen/_15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvDescriptionLabelNewLecture" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/background_bottom_button"
+            android:layout_marginTop="@dimen/_20dp"
+            app:cardElevation="@dimen/_40dp"
+            app:layout_constraintTop_toBottomOf="@id/etDescriptionNewLecture"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:layout_margin="@dimen/_20dp"
+                android:orientation="horizontal">
+                <Button
+                    android:layout_width="@dimen/_110dp"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/_5dp"
+                    android:layout_marginStart="@dimen/_20dp"
+                    android:text="@string/txt_discard"
+                    android:textColor="@color/red"
+                    style="?android:attr/buttonBarButtonStyle" />
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/_10dp"
+                    android:text="@string/txt_post_now"
+                    android:backgroundTint="@color/secondary_color"
+                    android:layout_marginStart="@dimen/_20dp"
+                    android:layout_marginEnd="@dimen/_20dp"
+                    android:textColor="@color/white"
+                    style="?android:attr/buttonBarButtonStyle" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

@@ -1,0 +1,41 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt"
+    android:width="100dp"
+    android:height="109dp"
+    android:viewportWidth="100"
+    android:viewportHeight="109">
+  <path
+      android:pathData="M50.001,65.909L63.637,100L43.182,100L34.091,65.909L50.001,65.909Z">
+    <aapt:attr name="android:fillColor">
+      <gradient 
+          android:startY="109.091"
+          android:startX="45.4551"
+          android:endY="59.1066"
+          android:endX="46.3373"
+          android:type="linear">
+        <item android:offset="0" android:color="#FFD6BF80"/>
+        <item android:offset="1" android:color="#FFECD183"/>
+      </gradient>
+    </aapt:attr>
+  </path>
+  <path
+      android:pathData="M0,100l0,-27.273l18.182,-0l0,27.273z">
+    <aapt:attr name="android:fillColor">
+      <gradient 
+          android:startY="71.4179"
+          android:startX="9.184"
+          android:endY="103.19376"
+          android:endX="7.99"
+          android:type="linear">
+        <item android:offset="0" android:color="#FFD6BF80"/>
+        <item android:offset="1" android:color="#FFECD183"/>
+      </gradient>
+    </aapt:attr>
+  </path>
+  <path
+      android:pathData="M26.551,0C34.9,0 42.195,1.5 48.438,4.5C54.756,7.43 59.607,11.685 62.992,17.266C66.452,22.777 68.182,29.23 68.182,36.625C68.182,44.02 66.452,50.438 62.992,55.88C59.607,61.321 54.756,65.507 48.438,68.437C42.195,71.297 34.9,72.727 26.551,72.727H0V0H26.551ZM26.551,62.995C35.727,62.995 42.759,60.693 47.648,56.089C52.537,51.485 54.982,44.997 54.982,36.625C54.982,28.184 52.537,21.591 47.648,16.848C42.759,12.104 35.727,9.732 26.551,9.732H12.102V62.995H26.551Z"
+      android:fillColor="#3A5C61"/>
+  <path
+      android:pathData="M93.229,100C91.285,100 89.655,99.346 88.339,98.039C87.022,96.731 86.364,95.112 86.364,93.182C86.364,91.252 87.022,89.633 88.339,88.325C89.655,87.018 91.285,86.364 93.229,86.364C95.11,86.364 96.709,87.018 98.025,88.325C99.342,89.633 100,91.252 100,93.182C100,95.112 99.342,96.731 98.025,98.039C96.709,99.346 95.11,100 93.229,100Z"
+      android:fillColor="#D6BF80"/>
+</vector>

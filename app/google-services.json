@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "58542575040",
+    "project_id": "idn-xi-project",
+    "storage_bucket": "idn-xi-project.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:58542575040:android:e0946eef05804c19e94c25",
+        "android_client_info": {
+          "package_name": "com.kei.dakomapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "58542575040-0n2mdf4ruuoje6kej2d97gbid7p1e8qt.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.kei.dakomapp",
+            "certificate_hash": "97a025c108b7c9a92d491435533c57786ba2e862"
+          }
+        },
+        {
+          "client_id": "58542575040-h5r2sletud1cc4gii39tcc2nfiacqb6o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDquN7pLN1zN1XhmWtQY_xX0MT_m2wpYkc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "58542575040-h5r2sletud1cc4gii39tcc2nfiacqb6o.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
