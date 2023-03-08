@@ -1,131 +1,135 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.DetailActivity">
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:ignore="ScrollViewCount">
-    <ImageView
-        android:id="@+id/ivPoster"
-        android:layout_width="@dimen/_200dp"
-        android:layout_height="@dimen/_200dp"
-        android:layout_marginTop="@dimen/_20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/poster"
-        android:contentDescription="@string/txt_iv" />
 
-    <TextView
-        android:id="@+id/tvTitleDetail"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="12dp"
-        android:text="@string/txt_detail"
-        android:textColor="@color/secondary_color"
-        android:textSize="16sp"
-        android:textStyle="normal"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ivPoster" />
+        <ImageView
+            android:id="@+id/ivPoster"
+            android:layout_width="@dimen/_200dp"
+            android:layout_height="@dimen/_200dp"
+            android:layout_marginTop="@dimen/_20dp"
+            android:contentDescription="@string/txt_iv"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/poster" />
 
-    <TextView
-        android:id="@+id/tvLecturerDetail"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="@string/txt_abu_ya_la_hizbul_majid_lc"
-        android:textColor="@color/main_color"
-        android:textSize="@dimen/_12sp"
-        app:layout_constraintEnd_toEndOf="@+id/tvTitleDetail"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/tvTitleDetail"
-        app:layout_constraintTop_toBottomOf="@+id/tvTitleDetail" />
+        <TextView
+            android:id="@+id/tvTitleDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="12dp"
+            android:text="@string/txt_detail"
+            android:textColor="@color/secondary_color"
+            android:textSize="@dimen/_20sp"
+            android:textStyle="normal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ivPoster" />
 
-    <TextView
-        android:id="@+id/tvQuotaDetail"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="80dp"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="@dimen/_10dp"
-        android:text="@string/txt__20_100"
-        android:textColor="@color/dark_grey"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.641"
-        app:layout_constraintStart_toEndOf="@+id/tvTitleDetail"
-        app:layout_constraintTop_toBottomOf="@+id/ivPoster" />
+        <TextView
+            android:id="@+id/tvLecturerDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:maxWidth="@dimen/_300dp"
+            android:text="@string/txt_abu_ya_la_hizbul_majid_lc"
+            android:textColor="@color/main_color"
+            android:textSize="@dimen/_18sp"
+            app:layout_constraintEnd_toEndOf="@+id/tvTitleDetail"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/tvTitleDetail"
+            app:layout_constraintTop_toBottomOf="@+id/tvTitleDetail" />
 
-    <TextView
-        android:id="@+id/tvMoreLabelDetail"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="8dp"
-        android:text="@string/txt_more_detail"
-        android:textColor="@color/main_color"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvCategoriesDetail" />
+        <TextView
+            android:id="@+id/tvQuotaDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="80dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="@dimen/_10dp"
+            android:text="@string/txt__20_100"
+            android:textSize="@dimen/_16sp"
+            android:textColor="@color/dark_grey"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.641"
+            app:layout_constraintStart_toEndOf="@+id/tvTitleDetail"
+            app:layout_constraintTop_toBottomOf="@+id/ivPoster" />
 
-    <TextView
-        android:id="@+id/tvLocationLabelDetail"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        android:text="@string/txt_location"
-        android:textColor="@color/secondary_color"
-        android:textSize="@dimen/_10sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/tvMoreLabelDetail"
-        app:layout_constraintTop_toBottomOf="@+id/tvMoreLabelDetail" />
+        <TextView
+            android:id="@+id/tvMoreLabelDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/txt_more_detail"
+            android:textSize="@dimen/_18sp"
+            android:textColor="@color/main_color"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvCategoriesDetail" />
 
-    <TextView
-        android:id="@+id/tvDateLabelDetail"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/txt_date"
-        android:layout_marginTop="@dimen/_7dp"
-        android:textColor="@color/secondary_color"
-        android:textSize="@dimen/_10sp"
-        app:layout_constraintStart_toStartOf="@+id/tvLocationLabelDetail"
-        app:layout_constraintTop_toBottomOf="@+id/tvLocationDetail" />
+        <TextView
+            android:id="@+id/tvLocationLabelDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/txt_location"
+            android:textColor="@color/secondary_color"
+            android:textSize="@dimen/_16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.008"
+            app:layout_constraintStart_toStartOf="@+id/tvMoreLabelDetail"
+            app:layout_constraintTop_toBottomOf="@+id/tvMoreLabelDetail" />
 
-    <TextView
-        android:id="@+id/tvTimeLabelDetail"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="7dp"
-        android:text="@string/txt_time"
-        android:textColor="@color/secondary_color"
-        android:textSize="@dimen/_10sp"
-        app:layout_constraintEnd_toEndOf="@+id/tvDateLabelDetail"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/tvDateLabelDetail"
-        app:layout_constraintTop_toBottomOf="@+id/tvDateLabelDetail" />
+        <TextView
+            android:id="@+id/tvDateLabelDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_7dp"
+            android:text="@string/txt_date"
+            android:textColor="@color/secondary_color"
+            android:textSize="@dimen/_16sp"
+            app:layout_constraintStart_toStartOf="@+id/tvLocationLabelDetail"
+            app:layout_constraintTop_toBottomOf="@+id/tvLocationDetail" />
 
-    <TextView
-        android:id="@+id/tvCpLabelDetail"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="7dp"
-        android:text="@string/txt_contact"
-        android:textColor="@color/secondary_color"
-        android:textSize="@dimen/_10sp"
-        app:layout_constraintEnd_toEndOf="@+id/tvTimeLabelDetail"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/tvTimeLabelDetail"
-        app:layout_constraintTop_toBottomOf="@+id/tvTimeLabelDetail" />
+        <TextView
+            android:id="@+id/tvTimeLabelDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:text="@string/txt_time"
+            android:textColor="@color/secondary_color"
+            android:textSize="@dimen/_16sp"
+            app:layout_constraintEnd_toEndOf="@+id/tvDateLabelDetail"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/tvDateLabelDetail"
+            app:layout_constraintTop_toBottomOf="@+id/tvDateLabelDetail" />
+
+        <TextView
+            android:id="@+id/tvCpLabelDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:text="@string/txt_contact"
+            android:textColor="@color/secondary_color"
+            android:textSize="@dimen/_16sp"
+            app:layout_constraintEnd_toEndOf="@+id/tvTimeLabelDetail"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/tvTimeLabelDetail"
+            app:layout_constraintTop_toBottomOf="@+id/tvTimeLabelDetail" />
 
         <TextView
             android:id="@+id/tvDescLabelDetail"
@@ -134,7 +138,7 @@
             android:layout_marginTop="28dp"
             android:text="@string/txt_description"
             android:textColor="@color/main_color"
-            android:textSize="@dimen/_12sp"
+            android:textSize="@dimen/_18sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="@+id/tvCpLabelDetail"
@@ -147,9 +151,8 @@
             android:layout_marginHorizontal="@dimen/_30dp"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="@dimen/_70dp"
-            android:maxHeight="@dimen/_50dp"
             android:text="@string/txt_description"
-            android:textSize="@dimen/_12sp"
+            android:textSize="@dimen/_16sp"
             app:layout_constraintBottom_toTopOf="@+id/cvBottomDetail"
             app:layout_constraintEnd_toEndOf="@+id/tvDescLabelDetail"
             app:layout_constraintStart_toStartOf="@+id/tvDescLabelDetail"
@@ -157,124 +160,130 @@
             app:layout_constraintVertical_bias="0.0" />
 
         <TextView
-        android:id="@+id/tvCategoriesDetail"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-            android:padding="@dimen/_5dp"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/ic_siroh"
-        android:gravity="center"
-        android:text="@string/txt_siroh"
-        android:textSize="@dimen/_12sp"
-        app:layout_constraintStart_toStartOf="@+id/tvLecturerDetail"
-        app:layout_constraintTop_toBottomOf="@+id/tvLecturerDetail" />
+            android:id="@+id/tvCategoriesDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/ic_siroh"
+            android:gravity="center"
+            android:paddingVertical="@dimen/_5dp"
+            android:paddingHorizontal="@dimen/_15dp"
+            android:text="@string/txt_siroh"
+            android:textSize="@dimen/_16sp"
+            app:layout_constraintStart_toStartOf="@+id/tvLecturerDetail"
+            app:layout_constraintTop_toBottomOf="@+id/tvLecturerDetail" />
 
-    <TextView
-        android:id="@+id/tvTypeDetail"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:padding="@dimen/_5dp"
-        android:layout_marginStart="10dp"
-        android:background="@drawable/ic_offline"
-        android:gravity="center"
-        android:text="@string/txt_offline"
-        android:textSize="@dimen/_12sp"
-        app:layout_constraintBottom_toBottomOf="@+id/tvCategoriesDetail"
-        app:layout_constraintEnd_toEndOf="@+id/tvLecturerDetail"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/tvCategoriesDetail"
-        app:layout_constraintTop_toTopOf="@+id/tvCategoriesDetail"
-        app:layout_constraintVertical_bias="0.0" />
+        <TextView
+            android:id="@+id/tvTypeDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/ic_offline"
+            android:gravity="center"
+            android:paddingVertical="@dimen/_5dp"
+            android:paddingHorizontal="@dimen/_15dp"
+            android:text="@string/txt_offline"
+            android:textSize="@dimen/_16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tvCategoriesDetail"
+            app:layout_constraintEnd_toEndOf="@+id/tvLecturerDetail"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/tvCategoriesDetail"
+            app:layout_constraintTop_toTopOf="@+id/tvCategoriesDetail"
+            app:layout_constraintVertical_bias="0.0" />
 
-    <TextView
-        android:id="@+id/tvLocationDetail"
-        android:layout_width="@dimen/_300dp"
-        android:maxWidth="@dimen/_300dp"
-        android:layout_height="wrap_content"
-        android:text="@string/txt_dump_address"
-        android:textSize="@dimen/_10sp"
-        android:layout_marginStart="@dimen/_3dp"
-        android:layout_marginEnd="@dimen/_15dp"
-        app:layout_constraintBottom_toBottomOf="@+id/tvLocationLabelDetail"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.069"
-        app:layout_constraintStart_toEndOf="@+id/tvLocationLabelDetail"
-        app:layout_constraintTop_toTopOf="@+id/tvLocationLabelDetail"
-        app:layout_constraintVertical_bias="0.0" />
+        <TextView
+            android:id="@+id/tvLocationDetail"
+            android:layout_width="@dimen/_300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_3dp"
+            android:layout_marginEnd="@dimen/_15dp"
+            android:maxWidth="@dimen/_300dp"
+            android:text="@string/txt_dump_address"
+            android:textSize="@dimen/_16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tvLocationLabelDetail"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/tvLocationLabelDetail"
+            app:layout_constraintTop_toTopOf="@+id/tvLocationLabelDetail"
+            app:layout_constraintVertical_bias="0.611" />
 
-    <TextView
-        android:id="@+id/tvDateDetail"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="@dimen/_7dp"
-        android:text="@string/txt_saturday_15_januari_2022"
-        android:textSize="@dimen/_10sp"
-        app:layout_constraintBottom_toBottomOf="@+id/tvDateLabelDetail"
-        app:layout_constraintStart_toEndOf="@+id/tvDateLabelDetail"
-        app:layout_constraintTop_toBottomOf="@+id/tvLocationDetail" />
+        <TextView
+            android:id="@+id/tvDateDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@string/txt_saturday_15_januari_2022"
+            android:textSize="@dimen/_16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tvDateLabelDetail"
+            app:layout_constraintStart_toEndOf="@+id/tvDateLabelDetail"
+            app:layout_constraintTop_toTopOf="@+id/tvDateLabelDetail" />
 
-    <TextView
-        android:id="@+id/tvTimeDetail"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
-        android:text="@string/txt_ba_da_maghrib_selesai"
-        android:textSize="@dimen/_10sp"
-        app:layout_constraintBottom_toBottomOf="@+id/tvTimeLabelDetail"
-        app:layout_constraintStart_toEndOf="@+id/tvTimeLabelDetail"
-        app:layout_constraintTop_toTopOf="@+id/tvTimeLabelDetail" />
+        <TextView
+            android:id="@+id/tvTimeDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:text="@string/txt_ba_da_maghrib_selesai"
+            android:textSize="@dimen/_16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tvTimeLabelDetail"
+            app:layout_constraintStart_toEndOf="@+id/tvTimeLabelDetail"
+            app:layout_constraintTop_toTopOf="@+id/tvTimeLabelDetail" />
 
-    <TextView
-        android:id="@+id/tvCpDetail"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:text="@string/txt__0811_108_0690_0911_951_2828"
-        android:textSize="@dimen/_10sp"
-        app:layout_constraintBottom_toBottomOf="@+id/tvCpLabelDetail"
-        app:layout_constraintStart_toEndOf="@+id/tvCpLabelDetail"
-        app:layout_constraintTop_toTopOf="@+id/tvCpLabelDetail" />
+        <TextView
+            android:id="@+id/tvCpDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:maxWidth="@dimen/_300dp"
+            android:text="@string/txt__0811_108_0690_0911_951_2828"
+            android:textSize="@dimen/_16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tvCpLabelDetail"
+            app:layout_constraintStart_toEndOf="@+id/tvCpLabelDetail"
+            app:layout_constraintTop_toTopOf="@+id/tvCpLabelDetail"
+            app:layout_constraintVertical_bias="0.333" />
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cvBottomDetail"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:foregroundGravity="bottom"
-        android:src="@drawable/background_bottom_button"
-        android:layout_marginTop="@dimen/_20dp"
-        app:cardElevation="@dimen/_40dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
-        <LinearLayout
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvBottomDetail"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/white"
-            android:layout_margin="@dimen/_20dp"
-            android:orientation="horizontal">
-            <ImageButton
-                android:id="@+id/btnSaveDetail"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/ic_save_active"
-                android:padding="@dimen/_10dp"
-                android:foregroundGravity="center_vertical"
-                android:background="@color/white_transparent"
-                android:contentDescription="@string/txt_iv"/>
+            android:foregroundGravity="bottom"
+            android:src="@drawable/background_bottom_button"
+            app:cardElevation="@dimen/_40dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
 
-            <Button
-                android:id="@+id/btnRegisterNowDetail"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="@dimen/_10dp"
-                android:text="@string/txt_register_now"
-                android:backgroundTint="@color/secondary_color"
-                android:layout_marginStart="@dimen/_20dp"
-                android:layout_marginEnd="@dimen/_20dp"
-                android:textColor="@color/white"
-                style="?android:attr/buttonBarButtonStyle" />
-        </LinearLayout>
-    </androidx.cardview.widget.CardView>
+                android:layout_margin="@dimen/_20dp"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/btnSaveDetail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white_transparent"
+                    android:contentDescription="@string/txt_iv"
+                    android:foregroundGravity="center_vertical"
+                    android:padding="@dimen/_10dp"
+                    android:src="@drawable/ic_save_active" />
+
+                <Button
+                    android:id="@+id/btnRegisterNowDetail"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:textSize="@dimen/_18sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_20dp"
+                    android:layout_marginEnd="@dimen/_20dp"
+                    android:backgroundTint="@color/secondary_color"
+                    android:padding="@dimen/_10dp"
+                    android:gravity="center"
+                    android:text="@string/txt_register_now"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

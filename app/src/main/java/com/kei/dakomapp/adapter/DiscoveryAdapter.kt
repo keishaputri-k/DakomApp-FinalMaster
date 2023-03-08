@@ -13,7 +13,7 @@ class DiscoveryAdapter(fragmentManager: FragmentManager, lifecycle: Lifecycle) :
     override fun createFragment(position: Int): Fragment {
         return if (position == 1) {
             ActivitiesFragment()
-        } else EventsFragment()
+        } else{ EventsFragment()}
     }
 
     override fun getItemCount(): Int {

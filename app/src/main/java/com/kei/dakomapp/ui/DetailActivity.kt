@@ -3,20 +3,18 @@ package com.kei.dakomapp.ui
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import androidx.activity.viewModels
 import com.bumptech.glide.Glide
-import com.google.gson.Gson
 import com.kei.dakomapp.R
 import com.kei.dakomapp.model.LectureItem
-import com.kei.dakomapp.room.repository.FavoriteRepository
-import com.kei.dakomapp.room.viewModel.FavoriteViewModel
-import dagger.hilt.android.AndroidEntryPoint
+import com.kei.dakomapp.room.viewModel.DetailViewModel
 import kotlinx.android.synthetic.main.activity_detail.*
 
-//@AndroidEntryPoint
 class DetailActivity : AppCompatActivity() {
-    private val favoriteRepository: FavoriteRepository by lazy {
-        return@lazy FavoriteRepository()
-    }
+
+    private val detailViewModel: DetailViewModel by viewModels()
+    var isFav = false
+
 
     companion object {
         const val EXTRA_LECTURE = "extra_lectures"
@@ -26,6 +24,7 @@ class DetailActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_detail)
         supportActionBar?.hide()
+
 
         val data = intent.getParcelableExtra(EXTRA_LECTURE) as? LectureItem
 //        var detail:LectureItem = Gson().fromJson(data,LectureItem::class.java)
@@ -44,10 +43,22 @@ class DetailActivity : AppCompatActivity() {
         tvDescDetail.text = data?.description.toString()
         tvQuotaDetail.text = data?.quota.toString()
 
+        detailViewModel.showFavorite(data)
+        observeData()
+
         btnSaveDetail.setOnClickListener {
-            data?.let { it1 -> favoriteRepository.insertFavoriteData(it1) }
+            data?.let { it1 -> detailViewModel.isFavoriteLecture(it1)}
         }
 
+
     }
+
+    private fun observeData() {
+        detailViewModel.isFavorite.observe(this) { isFav ->
+            this.isFav = isFav
+            btnSaveDetail.setImageResource(if (isFav) R.drawable.ic_save_active else R.drawable.ic_save_unactive)
+        }
+    }
+
 
 }

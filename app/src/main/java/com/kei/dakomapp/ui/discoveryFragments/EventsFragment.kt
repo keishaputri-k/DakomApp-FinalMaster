@@ -5,12 +5,13 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.RecyclerView
 import com.kei.dakomapp.R
+import com.kei.dakomapp.adapter.LecturesAdapter
 import dagger.hilt.android.AndroidEntryPoint
 
 //@AndroidEntryPoint
 class EventsFragment : Fragment() {
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

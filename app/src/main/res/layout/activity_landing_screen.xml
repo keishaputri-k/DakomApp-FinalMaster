@@ -23,21 +23,21 @@
         android:id="@+id/ivBackgroundLanding"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="226dp"
         android:contentDescription="@string/txt_iv"
         android:src="@drawable/ic_background"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/btnRegisterLanding"
         android:layout_width="@dimen/_185dp"
-        android:layout_height="@dimen/_40dp"
+        android:layout_height="@dimen/_60dp"
         android:layout_marginBottom="20dp"
         android:background="@drawable/button_color"
         android:text="@string/txt_register"
+        android:textSize="@dimen/_20dp"
         android:textColor="@color/white"
         app:layout_constraintBottom_toTopOf="@+id/btnLoginLanding"
         app:layout_constraintEnd_toEndOf="@+id/btnLoginLanding"
@@ -47,8 +47,9 @@
     <Button
         android:id="@+id/btnLoginLanding"
         android:layout_width="@dimen/_185dp"
-        android:layout_height="@dimen/_40dp"
+        android:layout_height="@dimen/_60dp"
         android:layout_marginBottom="70dp"
+        android:textSize="@dimen/_20dp"
         android:background="@drawable/button_color"
         android:text="@string/txt_login"
         app:layout_constraintBottom_toBottomOf="parent"

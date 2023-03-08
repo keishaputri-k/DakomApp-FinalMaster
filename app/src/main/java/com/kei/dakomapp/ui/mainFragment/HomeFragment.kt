@@ -17,13 +17,11 @@ import com.kei.dakomapp.adapter.LecturesAdapter
 import com.kei.dakomapp.model.ResponseLectures
 import com.kei.dakomapp.ui.discoveryFragments.DiscoveryActivity
 import com.kei.dakomapp.util.ApiService
-import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.fragment_home.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
-//@AndroidEntryPoint
 class HomeFragment : Fragment(), View.OnClickListener {
 
     private lateinit var lecturesAdapter: LecturesAdapter

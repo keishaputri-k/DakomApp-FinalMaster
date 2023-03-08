@@ -1,6 +1,5 @@
 package com.kei.dakomapp.room.repository
 
-import android.app.Application
 import com.kei.dakomapp.model.LectureItem
 import com.kei.dakomapp.room.local.DatabaseLocal
 import com.kei.dakomapp.room.local.FavoriteDao
@@ -11,8 +10,6 @@ import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.flowOn
 import java.util.concurrent.ExecutorService
 import java.util.concurrent.Executors
-import javax.inject.Inject
-import javax.inject.Singleton
 
 class FavoriteRepository {
     private val favoriteDao: FavoriteDao

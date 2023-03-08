@@ -5,16 +5,11 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.kei.dakomapp.model.LectureItem
 import com.kei.dakomapp.room.repository.FavoriteRepository
-import com.kei.dakomapp.room.repository.LectureRepository
-import com.kei.dakomapp.util.network.NetworkResult
-import dagger.hilt.android.lifecycle.HiltViewModel
-import kotlinx.coroutines.flow.onCompletion
-import kotlinx.coroutines.flow.onStart
 import kotlinx.coroutines.launch
-import javax.inject.Inject
 
-@HiltViewModel
-class DetailViewModel @Inject constructor(private val lectureRepository: LectureRepository, private val favoriteRepository: FavoriteRepository): ViewModel(){
+
+
+class DetailViewModel : ViewModel(){
     private val _detailLecture: MutableLiveData<List<LectureItem?>?> = MutableLiveData()
     val detailLecture get() = _detailLecture
 
@@ -29,33 +24,14 @@ class DetailViewModel @Inject constructor(private val lectureRepository: Lecture
     private val _isFavorite: MutableLiveData<Boolean> = MutableLiveData()
     val isFavorite get() = _isFavorite
 
+    private val favoriteRepository: FavoriteRepository by lazy {
+        return@lazy FavoriteRepository()
+    }
+
     private val _listFavorite :MutableLiveData<List<LectureItem>?> = MutableLiveData()
     init {
         getFavoriteUser()
         _isFavorite.postValue(false)
-    }
-
-    fun getDetailUser(lectures: String) {
-        if (strLecture != lectures) {
-            viewModelScope.launch {
-                strLecture = lectures
-                lectureRepository.getAllLectures().onStart {
-                    _loading.value = true
-                }.onCompletion {
-                    _loading.value = false
-                }.collect {
-                    when (it) {
-                        is NetworkResult.Success -> {
-                            _error.postValue(null)
-                            _detailLecture.postValue(it.data)
-                        }
-                        is NetworkResult.Error -> {
-                            _error.postValue(it.throwable)
-                        }
-                    }
-                }
-            }
-        }
     }
 
     private fun insert(favoriteUser: LectureItem?) {
@@ -77,15 +53,19 @@ class DetailViewModel @Inject constructor(private val lectureRepository: Lecture
     }
 
     fun showFavorite(favoriteLecture: LectureItem?){
+//        getFavoriteUser()
         viewModelScope.launch {
-            for (it in _listFavorite.value?: mutableListOf()){
-                if (favoriteLecture?.name == it.name){
-                    _isFavorite.postValue(true)
-                    break
-                }else{
-                    _isFavorite.postValue(false)
+            favoriteRepository.getListFavorite().collect {
+                for (item in it){
+                    if (favoriteLecture?.id == item.id){
+                        _isFavorite.postValue(true)
+                        break
+                    }else{
+                        _isFavorite.postValue(false)
+                    }
                 }
             }
+
         }
     }
 
@@ -99,7 +79,7 @@ class DetailViewModel @Inject constructor(private val lectureRepository: Lecture
         }
     }
 
-    fun isFavoriteUser(favoriteLecture: LectureItem?){
+    fun isFavoriteLecture(favoriteLecture: LectureItem?){
         viewModelScope.launch {
             if (_isFavorite.value == true){
                 delete(favoriteLecture)
